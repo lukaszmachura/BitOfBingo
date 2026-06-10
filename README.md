@@ -34,6 +34,11 @@ bingo generate --pages 4
 bingo generate --pages 10 --out bingo_10_pages.pdf
 ```
 
+### Start Bingo Lotery via WEB APP
+```bash
+make game
+```
+and now go to http://localhost:8501/ to see your game
 
 ---
 
@@ -256,3 +261,71 @@ With coverage:
 ```bash
 pytest --cov
 ```
+
+
+## 🎓 Classroom / Presentation Mode
+
+The Binary Game includes a presentation mode designed for classroom use or projection on a screen.
+
+### 🧠 Purpose
+
+This mode enables:
+- random generation of a decimal value and encoding system
+- large, high-visibility binary representation display
+- controlled reveal of the decimal value (DEC)
+- fast navigation to the next task
+
+---
+
+### 📺 UI (Presentation Mode)
+
+In Streamlit presentation mode, the interface displays:
+
+- the selected number system (e.g. `U2`, `NKB`, `ZM`, `Standard BIAS`, `Nuding`, `Diamond`, `Stibitz`, `8421`)
+- the binary representation (large and readable format)
+- control buttons:
+  - Show Answer — reveals the decimal value
+  - Next — generates a new task
+
+---
+
+### Presentation Styling (Large Display Mode)
+
+For classroom projection, it is recommended to increase font sizes:
+
+```python
+st.markdown(
+    """
+    <style>
+    .stCode {
+        font-size: 36px !important;
+        line-height: 1.4;
+    }
+
+    code {
+        font-size: 36px !important;
+        font-weight: 600;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+#### Recommended Presentation Settings
+
+* font size: 30–40px (binary display)
+* fullscreen browser mode
+* minimal UI distractions (hide sidebar if needed)
+* one task per screen
+
+⸻
+
+###  Typical Classroom Flow
+
+1. The teacher starts the application
+2. The system generates:
+    * a binary representation of a random decimal number
+    * a number system encoding
+3. Students analyze the binary representation
+4. Clicking Show DEC reveals the correct answer
+5. Clicking Next moves to the next task

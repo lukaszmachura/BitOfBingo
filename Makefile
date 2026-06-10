@@ -26,6 +26,8 @@ run:
 ui:
 	PYTHONPATH=src $(STREAMLIT) run $(APP)
 
+game:
+	PYTHONPATH=src $(STREAMLIT) run $(APP)
 
 # -------------------------
 # BINGO CLI
