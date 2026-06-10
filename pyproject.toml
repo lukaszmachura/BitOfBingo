@@ -18,7 +18,8 @@ authors = [
 dependencies = [
     "pypdf>=5.0.0",
     "reportlab>=4.0.0",
-    "typer>=0.12.0"
+    "typer>=0.12.0",
+    "streamlit>=1.30.0"
 ]
 
 [project.optional-dependencies]

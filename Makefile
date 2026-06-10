@@ -1,46 +1,68 @@
-.PHONY: install test cov clean pdf run
+PYTHON=python
+PIP=pip
+STREAMLIT=streamlit
 
-# ------------------------------------------------------------
-# Setup
-# ------------------------------------------------------------
+APP=src/binary_game/ui/app.py
+
+
+# -------------------------
+# SETUP
+# -------------------------
 
 install:
-	pip install -e .[dev]
+	$(PIP) install -e .
+
+dev:
+	$(PIP) install -e ".[dev]"
 
 
-# ------------------------------------------------------------
-# Tests
-# ------------------------------------------------------------
-
-test:
-	pytest
-
-
-cov:
-	pytest --cov --cov-report=term-missing
-
-
-# ------------------------------------------------------------
-# Project run (example placeholder)
-# ------------------------------------------------------------
+# -------------------------
+# RUN APP (STREAMLIT)
+# -------------------------
 
 run:
-	python -m bingo.pdf_exporter
+	PYTHONPATH=src $(STREAMLIT) run $(APP)
+
+ui:
+	PYTHONPATH=src $(STREAMLIT) run $(APP)
 
 
-# ------------------------------------------------------------
-# PDF generation shortcut (docelowo rozbudujesz)
-# ------------------------------------------------------------
+# -------------------------
+# BINGO CLI
+# -------------------------
 
-pdf:
-	python -c "from bingo.board_generator import BingoBoardGenerator; from bingo.pdf_exporter import BingoPdfExporter; \
-gen = BingoBoardGenerator.from_seed(42); boards = gen.generate_many(12); \
-BingoPdfExporter().export(boards, 'bingo.pdf', backside_pdf='assets/pdf/bingo75_backside.pdf')"
+bingo:
+	PYTHONPATH=src $(PYTHON) -m bingo.cli generate --pages 2
+
+bingo-4:
+	PYTHONPATH=src $(PYTHON) -m bingo.cli generate --pages 4
+
+bingo-10:
+	PYTHONPATH=src $(PYTHON) -m bingo.cli generate --pages 10
 
 
-# ------------------------------------------------------------
-# Cleanup
-# ------------------------------------------------------------
+# -------------------------
+# TESTS
+# -------------------------
+
+test:
+	PYTHONPATH=src pytest -q
+
+test-v:
+	PYTHONPATH=src pytest -vv
+
+
+# -------------------------
+# COVERAGE (optional)
+# -------------------------
+
+coverage:
+	PYTHONPATH=src pytest --cov=src --cov-report=term-missing
+
+
+# -------------------------
+# CLEAN
+# -------------------------
 
 clean:
 	rm -rf __pycache__
@@ -48,4 +70,3 @@ clean:
 	rm -rf .coverage
 	rm -rf dist
 	rm -rf build
-	find . -type d -name "__pycache__" -exec rm -rf {} +

@@ -321,7 +321,7 @@ class BinaryConverter:
 
     def encode_standard_bias(self) -> str:
         return self.encode_bias()
-
+    
     def encode_8421(self) -> str:
         return self.encode_bias(self.bits)
 
