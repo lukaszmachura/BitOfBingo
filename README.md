@@ -1,2 +1,2 @@
 # BitOfBingo
-Bingo game with binary numbers
+Bingo game with all sorts of binary numbers. 
