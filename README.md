@@ -80,8 +80,8 @@ BingoBoard(
     board_id="000001",
     grid=[
         [12, -5, 44, 1, 33],
-        ["CM", "CM", "CM", "CM", "CM"],
-        [7, 8, 9, 10, 11],
+        [-13, 9, 0, -1, 74],
+        [7, 8, "CM", 10, 11],
         [12, 13, 14, 15, 16],
         [17, 18, 19, 20, 21],
     ],
@@ -321,6 +321,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+```
 
 #### Recommended Presentation Settings
 
