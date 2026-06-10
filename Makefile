@@ -70,3 +70,4 @@ clean:
 	rm -rf .coverage
 	rm -rf dist
 	rm -rf build
+	streamlit cache clear
