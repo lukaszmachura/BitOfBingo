@@ -2,7 +2,7 @@
 
 import pytest
 
-from src.binary_converter import BinaryConverter
+from binary_converter import BinaryConverter
 
 
 # ============================================================

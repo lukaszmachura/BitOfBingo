@@ -1,25 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
 [project]
 name = "bitofbingo"
-version = "0.1.0"
-description = "Binary representations educational project"
-requires-python = ">=3.11"
+version = "0.2.2"
+description = "Bingo generator with binary number representations"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
 
-dependencies = []
+authors = [
+  { name = "Lukasz Machura" }
+]
+
+dependencies = [
+    "pypdf>=5.0.0",
+    "reportlab>=4.0.0",
+    "typer>=0.12.0"
+]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=8.0",
-    "pytest-cov>=5.0"
+    "pytest>=8",
+    "pytest-cov>=5",
 ]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-python_files = ["test_*.py"]
-addopts = "-v"
+pythonpath = ["src"]
+addopts = "-q"
+
 
 [tool.coverage.run]
 source = ["src"]
+omit = [
+    "tests/*",
+]
 
 [tool.coverage.report]
 show_missing = true
 skip_covered = true
+
+
+[project.scripts]
+bingo = "bingo.cli:app"
+
