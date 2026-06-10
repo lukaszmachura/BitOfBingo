@@ -1,11 +1,22 @@
-# BitOfBingo
-
 ![Python](https://img.shields.io/badge/python-3.14%2B-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow.svg)
 ![Tests](https://github.com/lukaszmachura/BitOfBingo/actions/workflows/tests.yml/badge.svg)
-
 <!-- [![codecov](https://codecov.io/gh/lukaszmachura/BitOfBingo/branch/main/graph/badge.svg)](https://codecov.io/gh/YOUR_USERNAME/BitOfBingo) -->
+
+
+# BitOfBingo
+Binary Game is an educational application designed as a playful blend of a classroom tool and a bingo-style game. While its core purpose is to support learning of binary number representations, it does so in a deliberately game-like and engaging format.
+
+At its heart, this is a **bingo-inspired learning system** that encourages students to actively “decode” numbers from different binary representation systems into decimal values found on printed cards. This constant switching between representations is intended to keep the brain engaged and “mentally active” — or, as we like to say with a slight wink, it helps keep the brain cells on their toes.
+
+The system includes:
+- 9 different binary representation systems (including NKB, U1, U2, ZM, STD BIAS, 8421, NUDING, STIBITZ, DIAMOND)
+- a module for generating printable A4 bingo sheets (6 boards per page) along with reference formulas for binary-to-decimal conversion
+- a random number generation module (like in Bingo) combined with a web-based presentation layer (Streamlit) for classroom use
+- a structured workflow for projecting tasks, revealing answers, and moving quickly between exercises
+
+The application is designed not only for teaching, but also for creating a competitive and engaging classroom atmosphere. Teachers are strongly encouraged to introduce small rewards or prizes for students to increase motivation and turn learning into a game-like experience.
 
 
 ## 🚀 Quick Start
