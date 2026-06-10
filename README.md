@@ -4,52 +4,7 @@
 ![Tests](https://github.com/lukaszmachura/BitOfBingo/actions/workflows/tests.yml/badge.svg)
 <!-- [![codecov](https://codecov.io/gh/lukaszmachura/BitOfBingo/branch/main/graph/badge.svg)](https://codecov.io/gh/YOUR_USERNAME/BitOfBingo) -->
 
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" width="220" height="auto">
-  <defs>
-    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3A86FF" />
-      <stop offset="100%" stop-color="#0056B3" />
-    </linearGradient>
-    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#70E000" />
-      <stop offset="100%" stop-color="#005F73" />
-    </linearGradient>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0056B3" />
-      <stop offset="100%" stop-color="#005F73" />
-    </linearGradient>
-    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#001524" flood-opacity="0.15" />
-    </filter>
-  </defs>
-  <style>
-    .stroke-weight { stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
-    .white-stroke { stroke: #FFFFFF; }
-    .text-main { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 900; text-anchor: middle; }
-    .text-number { font-family: 'Courier New', monospace; font-weight: bold; fill: #FFFFFF; font-size: 34px; text-anchor: middle; }
-  </style>
-  <g filter="url(#dropShadow)">
-    <path d="M 130,70 A 65,65 0 0,1 270,70 A 55,55 0 0,1 325,120 A 55,55 0 0,1 280,215 L 325,215 A 15,15 0 0,1 340,230 L 340,400 A 20,20 0 0,1 320,420 L 80,420 A 20,20 0 0,1 60,400 L 60,230 A 15,15 0 0,1 75,215 L 120,215 A 55,55 0 0,1 75,120 A 55,55 0 0,1 130,70 Z" fill="#FFFFFF" />
-  </g>
-  <g transform="translate(0, 5)">
-    <path d="M 200,85 A 45,45 0 0,0 155,100 A 40,40 0 0,0 120,135 A 35,35 0 0,0 135,185 A 40,40 0 0,0 200,200 Z" fill="url(#blueGrad)" />
-    <path d="M 200,85 A 45,45 0 0,1 245,100 A 40,40 0 0,1 280,135 A 35,35 0 0,1 265,185 A 40,40 0 0,1 200,200 Z" fill="url(#greenGrad)" />
-    <line x1="200" y1="85" x2="200" y2="200" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
-    <path d="M 160,115 A 15,15 0 0,0 145,135" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
-    <path d="M 175,175 A 20,20 0 0,1 150,160" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
-    <path d="M 240,115 A 15,15 0 0,1 255,135" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
-    <path d="M 225,175 A 20,20 0 0,0 250,160" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
-    <text x="165" y="152" class="text-number">01</text>
-    <text x="235" y="152" class="text-number">26</text>
-  </g>
-  <path d="M 80,230 A 10,10 0 0,1 90,220 L 310,220 A 10,10 0 0,1 320,230 L 320,395 A 15,15 0 0,1 305,410 L 95,410 A 15,15 0 0,1 80,395 Z" fill="url(#textGrad)" />
-  <text x="200" y="285" class="text-main" font-size="46" fill="#FFFFFF">Bit of</text>
-  <text x="200" y="375" class="text-main" font-size="72" fill="#FFFFFF" letter-spacing="1">BINGO</text>
-  <circle cx="105" cy="245" r="5" fill="#70E000" />
-  <circle cx="295" cy="245" r="5" fill="#3A86FF" />
-</svg>
+![Logo Bit of Bingo](assets/img/logo.png)
 
 # Bit Of Bingo
 Bit Of Bingo Game is an educational application designed as a playful blend of a classroom tool and a bingo-style game. While its core purpose is to support learning of binary number representations, it does so in a deliberately game-like and engaging format.
