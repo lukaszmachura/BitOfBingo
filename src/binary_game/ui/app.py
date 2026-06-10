@@ -76,9 +76,21 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-engine = BinaryGameEngine()
-converter = BinaryGameConverter(bits=8)
-presenter = BinaryPresenter()
+if "engine" not in st.session_state:
+    engine = BinaryGameEngine()
+    st.session_state.engine = engine
+
+if "converter" not in st.session_state:
+    converter = BinaryGameConverter(bits=8)
+    st.session_state.converter = converter
+
+if "presenter" not in st.session_state:
+    presenter = BinaryPresenter()
+    st.session_state.presenter = presenter
+
+engine = st.session_state.engine
+converter = st.session_state.converter
+presenter = st.session_state.presenter
 
 if "task" not in st.session_state:
     value, system = engine.next()
@@ -97,7 +109,7 @@ if st.session_state.show:
     st.success(f"DEC: {value}")
 
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     if st.button(t["show_dec"]):
@@ -105,6 +117,13 @@ with col1:
 
 with col2:
     if st.button(t["next"]):
+        st.session_state.task = engine.next()
+        st.session_state.show = False
+        st.rerun()
+
+with col3:
+    if st.button(t["new_game"]):
+        engine.reset()
         st.session_state.task = engine.next()
         st.session_state.show = False
         st.rerun()

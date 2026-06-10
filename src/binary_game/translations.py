@@ -6,6 +6,7 @@ TRANSLATIONS = {
         "show_dec": "Show Answer",
         "next": "Next",
         "decimal": "Decimal Value",
+        "new_game": "New Game",
     },
     "pl": {
         "title": "Binarne Bingo",
@@ -14,5 +15,6 @@ TRANSLATIONS = {
         "show_dec": "Pokaż odpowiedź",
         "next": "Następna liczba",
         "decimal": "Wartość Dziesiętna",
+        "new_game": "Nowa Gra",
     },
 }
