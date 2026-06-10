@@ -37,7 +37,6 @@ class BinaryGameEngine:
             self.SYSTEMS,
         )
 
-        print(f"Generated value: {value}, System: {system}, Remaining values: {len(self._available_values)}")
         return value, system
     
     def reset(self) -> None:
