@@ -1,5 +1,9 @@
 # BitOfBingo
-
+![Python](https://img.shields.io/badge/python-3.12%2B-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Status](https://img.shields.io/badge/status-in%20development-yellow.svg)
+![Tests](https://github.com/lukaszmachura/BitOfBingo/actions/workflows/tests.yml/badge.svg)
+[![codecov](https://codecov.io/gh/lukaszmachura/BitOfBingo/branch/main/graph/badge.svg)](https://codecov.io/gh/YOUR_USERNAME/BitOfBingo)
 
 ## BinaryConverter
 
@@ -60,3 +64,7 @@ BinaryConverter.from_decimal(16, bits=4).encode_nkb()
 ### Design notes
 
 The class is designed for educational purposes for CyberMil project.
+
+### Tests
+
+![Tests](https://github.com/lukaszmachura/BitOfBingo/actions/workflows/tests.yml/badge.svg)
