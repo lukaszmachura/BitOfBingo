@@ -3,6 +3,7 @@ import streamlit as st
 from binary_game.core.engine import BinaryGameEngine
 from binary_game.core.converter import BinaryGameConverter
 from binary_game.core.presenter import BinaryPresenter
+from binary_game.translations import TRANSLATIONS
 
 
 def parse_system(system, lang="pl"):
@@ -34,6 +35,25 @@ def parse_system(system, lang="pl"):
     }
     return SYSTEMS.get(lang, SYSTEMS_EN).get(system, system)
 
+
+if "lang" not in st.session_state:
+    st.session_state.lang = "en"
+language = st.session_state.lang
+
+col1, col2, col3 = st.columns([6, 1, 1])
+with col2:
+    if st.button("🇬🇧"):
+        language = "en"
+
+with col3:
+    if st.button("🇵🇱"):
+        language = "pl"
+
+st.session_state.lang = language
+t = TRANSLATIONS[language]
+
+with col1:
+    st.title(t["title"])
 
 st.set_page_config(layout="centered")
 
@@ -70,9 +90,7 @@ value, system = st.session_state.task
 binary = converter.encode(value, system)
 
 
-st.title("Binary Bingo")
-
-st.code(parse_system(system))
+st.code(parse_system(system, lang=language))
 st.code(binary)
 
 if st.session_state.show:
@@ -82,11 +100,11 @@ if st.session_state.show:
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("Show Answer"):
+    if st.button(t["show_dec"]):
         st.session_state.show = True
 
 with col2:
-    if st.button("Next"):
+    if st.button(t["next"]):
         st.session_state.task = engine.next()
         st.session_state.show = False
         st.rerun()
