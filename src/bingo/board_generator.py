@@ -13,7 +13,7 @@ class BingoBoardGenerator:
     The generated board:
 
     - contains 25 fields,
-    - uses "CM" in the center field,
+    - uses "BB" in the center field,
     - contains 24 unique integers,
     - draws numbers from a configurable range.
     """
@@ -108,7 +108,7 @@ class BingoBoardGenerator:
 
             for col in range(5):
                 if row == 2 and col == 2:
-                    current_row.append("CM")
+                    current_row.append("BB")
                 else:
                     current_row.append(numbers[index])
                     index += 1

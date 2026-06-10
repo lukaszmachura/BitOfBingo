@@ -81,12 +81,12 @@ def test_generate_returns_bingo_board():
     assert isinstance(board, BingoBoard)
 
 
-def test_center_contains_cm():
+def test_center_contains_bb():
     generator = BingoBoardGenerator()
 
     board = generator.generate()
 
-    assert board.grid[2][2] == "CM"
+    assert board.grid[2][2] == "BB"
 
 
 def test_board_contains_24_numbers():
@@ -98,7 +98,7 @@ def test_board_contains_24_numbers():
         value
         for row in board.grid
         for value in row
-        if value != "CM"
+        if value != "BB"
     ]
 
     assert len(values) == 24
@@ -113,7 +113,7 @@ def test_board_numbers_are_unique():
         value
         for row in board.grid
         for value in row
-        if value != "CM"
+        if value != "BB"
     ]
 
     assert len(values) == len(set(values))
@@ -131,7 +131,7 @@ def test_numbers_respect_range():
         value
         for row in board.grid
         for value in row
-        if value != "CM"
+        if value != "BB"
     ]
 
     assert all(

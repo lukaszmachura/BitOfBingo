@@ -8,7 +8,7 @@ def valid_grid():
     return [
         [-12, 5, 44, 61, -33],
         [17, -1, 70, -22, 11],
-        [3, 50, "CM", -45, 28],
+        [3, 50, "BB", -45, 28],
         [10, -8, 19, 72, -60],
         [-75, 32, 14, -17, 75],
     ]
@@ -161,12 +161,12 @@ def test_range_limits_are_allowed():
 # String representation
 # ============================================================
 
-def test_string_representation_contains_cm():
+def test_string_representation_contains_bb():
     board = BingoBoard(board_id="test", grid=valid_grid())
 
     output = str(board)
 
-    assert "CM" in output
+    assert "BB" in output
 
 
 def test_string_representation_contains_numbers():
