@@ -7,6 +7,34 @@
 
 <!-- [![codecov](https://codecov.io/gh/lukaszmachura/BitOfBingo/branch/main/graph/badge.svg)](https://codecov.io/gh/YOUR_USERNAME/BitOfBingo) -->
 
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+pip install -e .
+```
+
+### Generate 2 pages PDF and save to `bingo.pdf`
+
+```bash
+bingo
+```
+
+### Generate 4 pages PDF and save to `bingo.pdf`
+
+```bash
+bingo generate --pages 4
+```
+
+### Generate 10 pages PDF and save to `bingo_10_pages.pdf`
+
+```bash
+bingo generate --pages 10 --out bingo_10_pages.pdf
+```
+
+
 ---
 
 ## 🎲 Bingo Generator (Binary Edition)
