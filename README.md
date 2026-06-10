@@ -11,7 +11,7 @@ Bit Of Bingo Game is an educational application designed as a playful blend of a
 At its heart, this is a **bingo-inspired learning system** that encourages students to actively “decode” numbers from different binary representation systems into decimal values found on printed cards. This constant switching between representations is intended to keep the brain engaged and active.
 
 The system includes:
-- 9 different binary representation systems (including NKB, U1, U2, ZM, STD BIAS, 8421, NUDING, STIBITZ, DIAMOND)
+- 9 different binary representation systems (natural binary code, U1, U2, sign-magnitude, standrd bias, 8421, NUDING, STIBITZ, DIAMOND)
 - a module for generating printable A4 bingo sheets (6 boards per page) along with reference formulas for binary-to-decimal conversion
 - a random number generation module (like in Bingo) combined with a web-based presentation layer (Streamlit) for classroom use
 - a structured workflow for projecting tasks, revealing answers, and moving quickly between exercises
