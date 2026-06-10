@@ -4,7 +4,12 @@
 ![Tests](https://github.com/lukaszmachura/BitOfBingo/actions/workflows/tests.yml/badge.svg)
 <!-- [![codecov](https://codecov.io/gh/lukaszmachura/BitOfBingo/branch/main/graph/badge.svg)](https://codecov.io/gh/YOUR_USERNAME/BitOfBingo) -->
 
-![Logo Bit of Bingo](assets/img/logo.png)
+<div align="center">
+
+<img src="assets/img/logo.png" alt="Logo Bit of Bingo" width="220" height="auto">
+</div>
+
+<!-- ![Logo Bit of Bingo](assets/img/logo.png) -->
 
 # Bit Of Bingo
 Bit Of Bingo Game is an educational application designed as a playful blend of a classroom tool and a bingo-style game. While its core purpose is to support learning of binary number representations, it does so in a deliberately game-like and engaging format.
