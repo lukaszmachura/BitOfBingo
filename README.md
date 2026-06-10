@@ -36,6 +36,7 @@ The class implements the following number systems:
 
 ### Example usage
 
+```python
 from binary_converter import BinaryConverter
 
 # Binary → Decimal
@@ -45,13 +46,16 @@ print(value)  # -2
 # Decimal → Binary
 binary = BinaryConverter.from_decimal(-2, bits=4).encode_u2()
 print(binary)  # '1110'
+```
 
 ### Error handling
 
 The class raises ValueError in case of overflow, for example when a number cannot be represented within the specified bit width:
 
+```python
 BinaryConverter.from_decimal(16, bits=4).encode_nkb()
 # ValueError: Overflow: 16 cannot be represented using 4 bits...
+```
 
 ### Design notes
 
