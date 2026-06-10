@@ -122,26 +122,45 @@ class BingoPdfExporter:
         x: int,
         y: int,
     ) -> None:
-        """Draws a single bingo board.
+        """Draws a full 5x5 bingo board."""
 
-        Placeholder implementation.
-        """
-        width = 240
-        height = 220
+        board_size = 5
+        cell_size = 40
+        width = cell_size * board_size
+        height = cell_size * board_size
 
+        # outer frame
         pdf.rect(x, y, width, height)
 
         pdf.setFont("Helvetica-Bold", 10)
         pdf.drawString(
-            x + 10,
-            y + height - 15,
+            x + 5,
+            y + height + 5,
             f"Board #{board.board_id}",
         )
 
-        # TODO:
-        # draw 5x5 grid
-        # draw values
-        # draw CM marker
+        for row in range(board_size):
+            for col in range(board_size):
+                value = board.grid[row][col]
+
+                cell_x = x + col * cell_size
+                cell_y = y + (board_size - 1 - row) * cell_size
+
+                # draw cell border
+                pdf.rect(cell_x, cell_y, cell_size, cell_size)
+
+                # center position
+                text_x = cell_x + cell_size / 2
+                text_y = cell_y + cell_size / 2 - 4
+
+                # special center field
+                if row == 2 and col == 2:
+                    pdf.setFont("Helvetica-Bold", 14)
+                    pdf.drawCentredString(text_x, text_y, "CM")
+                    continue
+
+                pdf.setFont("Helvetica", 11)
+                pdf.drawCentredString(text_x, text_y, str(value))
 
     def _merge_with_backside(
         self,
