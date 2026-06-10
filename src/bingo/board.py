@@ -6,8 +6,8 @@ class BingoBoard:
     """Represents a single bingo board.
 
     Attributes:
-        grid: A 5×5 grid containing integers and a central
-            marker ("CM") in the middle field.
+        grid: A 5x5 grid containing integers and a central
+            marker ("BB") in the middle field.
     """
     board_id: str
     grid: list[list[int | str]]
@@ -30,9 +30,9 @@ class BingoBoard:
                     "Each row must contain exactly 5 values."
                 )
 
-        if self.grid[2][2] != "CM":
+        if self.grid[2][2] != "BB":
             raise ValueError(
-                "The center field must contain 'CM'."
+                "The center field must contain 'BB'."
             )
 
         for row_index, row in enumerate(self.grid):
@@ -79,7 +79,7 @@ if __name__ == "__main__":
         grid=[
             [-75, 32, 14, -17, 75],
             [-75, 32, 14, -17, 75],
-            [-75, 32, "CM", -17, 75],
+            [-75, 32, "BB", -17, 75],
             [-75, 32, 14, -17, 75],
             [-75, 32, 14, -17, 75],
         ],
