@@ -4,6 +4,16 @@ from binary_game.core.engine import BinaryGameEngine
 from binary_game.core.converter import BinaryGameConverter
 from binary_game.core.presenter import BinaryPresenter
 from binary_game.translations import TRANSLATIONS
+import logging
+from pathlib import Path
+
+
+logging.basicConfig(
+    filename="game.log",
+    level=logging.INFO,
+    filemode="w",
+    format="%(asctime)s %(message)s",
+)
 
 
 def parse_system(system, lang="pl"):
@@ -123,6 +133,7 @@ with col2:
 
 with col3:
     if st.button(t["new_game"]):
+        Path("game.log").write_text("")
         engine.reset()
         st.session_state.task = engine.next()
         st.session_state.show = False

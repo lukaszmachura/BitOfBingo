@@ -156,7 +156,7 @@ class BingoPdfExporter:
                 # special center field
                 if row == 2 and col == 2:
                     pdf.setFont("Helvetica-Bold", 14)
-                    pdf.drawCentredString(text_x, text_y, "CM")
+                    pdf.drawCentredString(text_x, text_y, "BB")
                     continue
 
                 pdf.setFont("Helvetica", 11)

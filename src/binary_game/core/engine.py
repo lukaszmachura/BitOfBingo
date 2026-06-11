@@ -1,6 +1,12 @@
+from __future__ import annotations
+
 import random
 from .system_validator import SystemValidator
+import logging
+# from pathlib import Path
 
+
+logger = logging.getLogger(__name__)
 
 class BinaryGameEngine:
     SYSTEMS = [
@@ -36,6 +42,8 @@ class BinaryGameEngine:
             value,
             self.SYSTEMS,
         )
+
+        logger.info("%s,%s", value, system)
 
         return value, system
     
