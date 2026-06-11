@@ -10,8 +10,8 @@ from bingo.pdf_exporter import BingoPdfExporter
 app = typer.Typer(help="Bingo PDF generator with binary number game.")
 
 
-print("CLI MODULE LOADED")
-print("APP CREATED:", app)
+#print("CLI MODULE LOADED")
+#print("APP CREATED:", app)
 
 @app.command()
 def generate(

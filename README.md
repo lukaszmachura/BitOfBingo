@@ -42,10 +42,10 @@ bingo
 bingo generate --pages 4
 ```
 
-### Generate 10 pages PDF and save to `bingo_10_pages.pdf`
+### Generate 10 pages PDF with random seed and save to `bingo_10_pages.pdf`
 
 ```bash
-bingo generate --pages 10 --out bingo_10_pages.pdf
+bingo generate --pages 10 --seed $RANDOM --out bingo_10_pages.pdf
 ```
 
 ### Start Bingo Lotery via WEB APP
